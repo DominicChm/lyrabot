@@ -10,7 +10,6 @@
   "license": "",
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
-    "@types/lowdb": "^1.0.10",
     "canvacord": "^5.2.1",
     "dice-notation-js": "^1.0.3",
     "discord-music-player": "^7.2.0",
@@ -18,7 +17,7 @@
     "discord.js": "^12.5.3",
     "discord.js-commando": "^0.12.3",
     "jest": "^27.0.6",
-    "lowdb": "^1.0.0",
+    "lowdb": "^2.0.0",
     "require-all": "^3.0.0",
     "tempy": "^1.0.1",
     "winston": "^3.3.3"

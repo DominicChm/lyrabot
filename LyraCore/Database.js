@@ -1,11 +1,15 @@
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
 const log = LyraCore.logger("Database");
 
-module.exports = function (config) {
+module.exports = async function (config) {
+    const {Low, JSONFile} = await import("lowdb");
+
     log("Connecting to DB")
-    const adapter = new FileSync(config.databasePath);
-    const l = low(adapter);
-    l.read();
+    const adapter = new JSONFile(config.databasePath);
+    const l = new Low(adapter);
+    await l.read();
+
+    l.data ||= {}; //Set default obj.
+
+    await l.write();
     return l;
 }
